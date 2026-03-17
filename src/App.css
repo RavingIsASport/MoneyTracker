@@ -1,0 +1,7 @@
+.app {
+  font-family: "Momo Trust Display", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}

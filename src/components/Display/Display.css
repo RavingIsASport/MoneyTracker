@@ -1,0 +1,25 @@
+.transactions-list {
+  margin-top: 2em;
+  width: 100%;
+}
+
+.transactionTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.transactionTable th,
+.transactionTable td {
+  border: 1px solid #208f04;
+  padding: 8px;
+  width: 50%;
+}
+.transactionTable tr:nth-child(even) {
+  background-color: #ddf0d8;
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+.display {
+  font-size: 2rem;
+  margin: 2rem;
+  color: darkgreen;
+}

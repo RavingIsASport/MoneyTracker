@@ -1,0 +1,104 @@
+/* Container styling */
+.form-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Oxanium", BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.form-container h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Grouping labels and inputs */
+.form-group,
+.textInput {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  padding: 0 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #555;
+  z-index: 1;
+  background-color: #fff;
+}
+
+/* Select and Input common styles */
+select,
+.inputWrapper input {
+  width: 100%;
+  padding: 14px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  background-color: #ffffff;
+}
+
+select:focus,
+.inputWrapper input:focus {
+  outline: none;
+  border-color: #0ca713;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  background-color: #fff;
+}
+
+/* Icon Positioning */
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dollarIcon {
+  position: absolute;
+  left: 12px;
+  color: #888;
+  pointer-events: none; /* User clicks through icon to input */
+}
+
+/* Adjust input padding to make room for icon */
+.inputWrapper input {
+  padding-left: 32px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button[type="submit"]:active {
+  transform: translateY(1px);
+}
