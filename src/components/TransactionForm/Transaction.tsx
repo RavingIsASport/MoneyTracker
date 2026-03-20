@@ -1,15 +1,22 @@
-import "./Form.css";
-import { FaDollarSign } from "react-icons/fa6";
+import "./Transaction.css";
+import { FaDollarSign, FaX } from "react-icons/fa6";
 
 interface FormProps {
-  onSubmit: (event: any) => void;
+  onSubmit: (event: any, formType: "transaction") => void;
+  closeDialog?: () => void;
 }
 
-export default function Form({ onSubmit }: FormProps) {
+export default function Transaction({ onSubmit, closeDialog }: FormProps) {
   return (
     <>
-      <form onSubmit={onSubmit} className="form-container">
+      <form
+        onSubmit={(e) => onSubmit(e, "transaction")}
+        className="form-container"
+      >
         <h2>Add Transaction</h2>
+        <button className="close" type="button" onClick={closeDialog}>
+          <FaX />
+        </button>
         <div className="form-group">
           <label htmlFor="type">Type</label>
           <select id="type" name="type" defaultValue="Other">

@@ -3,6 +3,7 @@
   width: 100%;
 }
 
+/* Transaction Table Styling */
 .transactionTable {
   width: 100%;
   border-collapse: collapse;
@@ -13,13 +14,29 @@
   padding: 8px;
   width: 50%;
 }
-.transactionTable tr:nth-child(even) {
-  background-color: #ddf0d8;
+
+.transactionTable thead {
   color: rgb(0, 0, 0);
   width: 100%;
 }
-.display {
+
+/* Row Styling based on type */
+.transactionRow {
+  background-color: #fcadad;
+}
+.depositRow {
+  background-color: #ddf0d8;
+}
+
+/* Total Amount Styling based on value */
+.positiveTotal,
+.negativeTotal {
   font-size: 2rem;
   margin: 2rem;
-  color: darkgreen;
+}
+.positiveTotal {
+  color: #208f04;
+}
+.negativeTotal {
+  color: #ff0000;
 }

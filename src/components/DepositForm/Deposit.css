@@ -1,15 +1,11 @@
 /* Container styling */
-.form-container {
-  max-width: 400px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #ffffff;
+.deposit-container {
+  padding: 3rem;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   font-family: "Oxanium", BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-.form-container h2 {
+.deposit-container h2 {
   margin-top: 0;
   margin-bottom: 1.5rem;
   color: #333;
@@ -18,7 +14,6 @@
 }
 
 /* Grouping labels and inputs */
-.form-group,
 .textInput {
   margin-bottom: 1.25rem;
   display: flex;
@@ -53,7 +48,6 @@ select,
   background-color: #ffffff;
 }
 
-select:focus,
 .inputWrapper input:focus {
   outline: none;
   border-color: #0ca713;
@@ -101,4 +95,19 @@ button[type="submit"]:hover {
 
 button[type="submit"]:active {
   transform: translateY(1px);
+}
+
+/* Close Button */
+.deposit-container .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.deposit-container .close:hover {
+  color: #a70909;
+  cursor: pointer;
 }

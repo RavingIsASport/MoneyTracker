@@ -2,10 +2,10 @@ import "./Display.css";
 
 interface DisplayProps {
   totalAmount: number;
-  transactions: { type?: string; amount: number }[];
+  bothForms: any[];
 }
 
-export default function Display({ totalAmount, transactions }: DisplayProps) {
+export default function Display({ totalAmount, bothForms }: DisplayProps) {
   return (
     <>
       <div className="transactions-list">
@@ -16,16 +16,23 @@ export default function Display({ totalAmount, transactions }: DisplayProps) {
               <th>Amount</th>
             </tr>
           </thead>
-          {transactions.map(({ type, amount }, index) => (
-            <tr key={index}>
-              <td>{type}</td>
-              <td>${amount.toFixed(2)}</td>
-            </tr>
-          ))}
+          <tbody>
+            {bothForms.map(({ type, amount }, index) => (
+              <tr
+                key={index}
+                className={type === "Deposit" ? "depositRow" : "transactionRow"}
+              >
+                <td>{type}</td>
+                <td>
+                  {type === "Deposit" ? "+ " : "- "}${amount.toFixed(2)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
 
-      <div className="display">
+      <div className={totalAmount >= 0 ? "positiveTotal" : "negativeTotal"}>
         <strong>Total: ${totalAmount.toFixed(2)}</strong>
       </div>
     </>
