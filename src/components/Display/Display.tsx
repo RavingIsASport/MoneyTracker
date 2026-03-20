@@ -9,6 +9,9 @@ export default function Display({ totalAmount, bothForms }: DisplayProps) {
   return (
     <>
       <div className="transactions-list">
+        <div className={totalAmount >= 0 ? "positiveTotal" : "negativeTotal"}>
+          <strong>Total: ${totalAmount.toFixed(2)}</strong>
+        </div>
         <table className="transactionTable">
           <thead>
             <tr>
@@ -30,10 +33,6 @@ export default function Display({ totalAmount, bothForms }: DisplayProps) {
             ))}
           </tbody>
         </table>
-      </div>
-
-      <div className={totalAmount >= 0 ? "positiveTotal" : "negativeTotal"}>
-        <strong>Total: ${totalAmount.toFixed(2)}</strong>
       </div>
     </>
   );

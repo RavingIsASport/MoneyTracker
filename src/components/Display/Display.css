@@ -1,5 +1,4 @@
 .transactions-list {
-  margin-top: 2em;
   width: 100%;
 }
 
@@ -33,7 +32,9 @@
 .negativeTotal {
   font-size: 2rem;
   margin: 2rem;
+  justify-self: end;
 }
+
 .positiveTotal {
   color: #208f04;
 }

@@ -96,13 +96,13 @@ export default function Main() {
           Deposit
         </button>
       </div>
+      <Display totalAmount={totalAmount()} bothForms={state} />
       <dialog className="transactionForm" ref={transactionRef.dialogRef}>
         <Transaction onSubmit={onSubmit} closeDialog={transactionRef.close} />
       </dialog>
       <dialog className="depositForm" ref={depositRef.dialogRef}>
         <Deposit onSubmit={onSubmit} closeDialog={depositRef.close} />
       </dialog>
-      <Display totalAmount={totalAmount()} bothForms={state} />
     </div>
   );
 }
